@@ -1,5 +1,5 @@
-let columns = 10;
-let rows = 10;
+let columns = 22;
+let rows = 15;
 let testo = "(^/:";
 
 //
@@ -12,12 +12,18 @@ function preload() {
 
 //
 
+let cam;
+
 function setup() {
   createCanvas(windowWidth, windowHeight, "webgl");
   angleMode(DEGREES);
 
   textFont(font);
   textSize(height / 10);
+
+  cam = createCamera();
+  cam.setPosition(0, -800, 100);
+  cam.lookAt(0, 0, 0);
 }
 
 //
